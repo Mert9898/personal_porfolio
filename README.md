@@ -28,7 +28,7 @@ A modern, responsive portfolio website showcasing my work as a Data Analyst with
 
 ## 🌐 Live Demo
 
-Visit the live site: [Your Vercel URL will be here]
+Visit the live site: **[https://personal-porfolio-opal.vercel.app/](https://personal-porfolio-opal.vercel.app/)**
 
 ## 📧 Contact
 
