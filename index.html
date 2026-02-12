@@ -186,18 +186,37 @@
                 </div>
 
                 <div class="project-card">
-                    <h3>Fish Auction Mobile Application</h3>
-                    <p>Engineered a real-time mobile application for fish auctions. Implemented real-time bid
-                        submissions and notification systems with <1 second latency. Increased active participant
-                            engagement by 25% and reduced transaction failures.</p>
-                            <div class="project-tags">
-                                <span class="tag">Mobile Dev</span>
-                                <span class="tag">Real-time</span>
-                                <span class="tag">WebSocket</span>
-                                <span class="tag">Notification Systems</span>
-                            </div>
-                            <a href="https://github.com/Mert9898/Fish-Auction" class="project-link" target="_blank">View
-                                on GitHub →</a>
+                    <h3>Fish Auction - Real-Time Bid System</h3>
+                    <p>High-stakes bidding platform requiring &lt;1s latency for data synchronization and transaction
+                        integrity.</p>
+
+                    <div class="case-study-details">
+                        <div class="detail-item">
+                            <strong>Architecture</strong>
+                            <p>Mobile Client ↔ Event-Driven Backend ↔ Real-time Sync Engine. Orchestrated for concurrent
+                                bidding events.</p>
+                        </div>
+                        <div class="detail-item">
+                            <strong>Performance Focus</strong>
+                            <p>Reduced sync latency to sub-second by optimizing event loops and minimizing serialization
+                                overhead between services.</p>
+                        </div>
+                        <div class="detail-item">
+                            <strong>Tradeoff</strong>
+                            <p>Prioritized Consistency over Availability (CAP theorem) for the bidding engine to prevent
+                                race conditions during peak auction moments.</p>
+                        </div>
+                        <div class="detail-item">
+                            <strong>v2.0 Roadmap</strong>
+                            <p>Introduce a service-worker offline-first strategy for unstable mobile connections and
+                                implement automated dispute-resolution logic.</p>
+                        </div>
+                    </div>
+                    <div class="project-tags">
+                        <span class="tag">Concurrency</span>
+                        <span class="tag">Low-Latency</span>
+                        <span class="tag">Real-Time</span>
+                    </div>
                 </div>
             </div>
         </div>
