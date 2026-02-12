@@ -149,17 +149,39 @@
         <div class="container">
             <h2>Featured Projects</h2>
             <div class="projects-grid">
+                <!-- Case Study: C3 -->
                 <div class="project-card">
-                    <h3>C3 - Students' Collaboration Platform</h3>
-                    <p>Developed a full-stack collaboration platform for 200+ computer engineering students. Optimized
-                        API contracts and database schemas, improving system performance by 15%. Implemented secure
-                        role-based authorization, improving login efficiency by 20%.</p>
+                    <h3>C3 - Collaboration Ecosystem</h3>
+                    <p>A full-stack collaboration platform for computer engineering students, designed to handle
+                        high-frequency interactions and structured resource sharing.</p>
+
+                    <div class="case-study-details">
+                        <div class="detail-item">
+                            <strong>Architecture</strong>
+                            <p>React Frontend ↔ Java/Spring Boot API ↔ MongoDB. Distributed architecture focused on
+                                event-driven state updates.</p>
+                        </div>
+                        <div class="detail-item">
+                            <strong>Technical Tradeoff</strong>
+                            <p>Chose NoSQL (MongoDB) over RDBMS to optimize for flexible, growing student-generated
+                                datasets, trading strict relational mapping for horizontal scalability.</p>
+                        </div>
+                        <div class="detail-item">
+                            <strong>Security Decision</strong>
+                            <p>Implemented Layered RBAC at the API level, ensuring that data exposure is restricted even
+                                if client-side validation is bypassed.</p>
+                        </div>
+                        <div class="detail-item">
+                            <strong>v2.0 Roadmap</strong>
+                            <p>Implement WebSocket-based real-time document editing and a Redis caching layer for
+                                frequent API queries to reduce DB hits by ~40%.</p>
+                        </div>
+                    </div>
+
                     <div class="project-tags">
+                        <span class="tag">System Design</span>
                         <span class="tag">Java</span>
-                        <span class="tag">Spring Boot</span>
-                        <span class="tag">React</span>
-                        <span class="tag">MongoDB</span>
-                        <span class="tag">REST API</span>
+                        <span class="tag">Scalability</span>
                     </div>
                 </div>
 
