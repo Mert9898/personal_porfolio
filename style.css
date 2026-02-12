@@ -8,30 +8,30 @@
   --color-bg-secondary: hsl(240, 15%, 8%);
   --color-text-primary: hsl(0, 0%, 95%);
   --color-text-secondary: hsl(0, 0%, 70%);
-  
+
   /* Vibrant Accents */
   --color-accent-cyan: hsl(190, 95%, 55%);
   --color-accent-blue: hsl(220, 90%, 60%);
   --color-accent-purple: hsl(270, 80%, 65%);
   --color-accent-pink: hsl(320, 85%, 60%);
-  
+
   /* Gradients */
   --gradient-primary: linear-gradient(135deg, var(--color-accent-cyan), var(--color-accent-blue));
   --gradient-secondary: linear-gradient(135deg, var(--color-accent-purple), var(--color-accent-pink));
   --gradient-bg: linear-gradient(180deg, var(--color-bg-primary) 0%, var(--color-bg-secondary) 100%);
-  
+
   /* Glass Effect */
   --glass-bg: rgba(255, 255, 255, 0.05);
   --glass-border: rgba(255, 255, 255, 0.1);
   --glass-blur: 10px;
-  
+
   /* Spacing */
   --spacing-xs: 0.5rem;
   --spacing-sm: 1rem;
   --spacing-md: 2rem;
   --spacing-lg: 4rem;
   --spacing-xl: 6rem;
-  
+
   /* Typography */
   --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   --font-size-xs: 0.875rem;
@@ -41,18 +41,18 @@
   --font-size-xl: 2rem;
   --font-size-2xl: 3rem;
   --font-size-3xl: 4rem;
-  
+
   /* Transitions */
   --transition-fast: 0.2s ease;
   --transition-normal: 0.3s ease;
   --transition-slow: 0.5s ease;
-  
+
   /* Border Radius */
   --radius-sm: 0.5rem;
   --radius-md: 1rem;
   --radius-lg: 1.5rem;
   --radius-full: 9999px;
-  
+
   /* Shadows */
   --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.1);
   --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.2);
@@ -93,15 +93,22 @@ body::before {
   width: 200%;
   height: 200%;
   background: radial-gradient(circle at 20% 50%, rgba(0, 200, 255, 0.1) 0%, transparent 50%),
-              radial-gradient(circle at 80% 80%, rgba(200, 0, 255, 0.1) 0%, transparent 50%);
+    radial-gradient(circle at 80% 80%, rgba(200, 0, 255, 0.1) 0%, transparent 50%);
   animation: backgroundMove 20s ease-in-out infinite;
   z-index: -1;
   pointer-events: none;
 }
 
 @keyframes backgroundMove {
-  0%, 100% { transform: translate(0, 0); }
-  50% { transform: translate(-10%, -10%); }
+
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(-10%, -10%);
+  }
 }
 
 /* ===================================
@@ -110,16 +117,32 @@ body::before {
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: 700;
   line-height: 1.2;
   margin-bottom: var(--spacing-sm);
 }
 
-h1 { font-size: var(--font-size-3xl); }
-h2 { font-size: var(--font-size-2xl); }
-h3 { font-size: var(--font-size-xl); }
-h4 { font-size: var(--font-size-lg); }
+h1 {
+  font-size: var(--font-size-3xl);
+}
+
+h2 {
+  font-size: var(--font-size-2xl);
+}
+
+h3 {
+  font-size: var(--font-size-xl);
+}
+
+h4 {
+  font-size: var(--font-size-lg);
+}
 
 p {
   margin-bottom: var(--spacing-sm);
@@ -262,7 +285,9 @@ nav .container {
 }
 
 @keyframes blink {
-  50% { border-color: transparent; }
+  50% {
+    border-color: transparent;
+  }
 }
 
 .hero-content p {
@@ -556,6 +581,68 @@ footer p {
 }
 
 /* ===================================
+   EDUCATION SECTION
+   =================================== */
+
+.education-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-md);
+}
+
+.education-item {
+  background: var(--glass-bg);
+  backdrop-filter: blur(var(--glass-blur));
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-md);
+  transition: all var(--transition-normal);
+}
+
+.education-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: var(--spacing-xs);
+}
+
+.education-header h3 {
+  font-size: var(--font-size-md);
+  color: var(--color-text-primary);
+  margin-bottom: 0;
+}
+
+.education-date {
+  font-size: var(--font-size-xs);
+  color: var(--color-accent-cyan);
+  font-weight: 600;
+}
+
+.education-school {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+}
+
+/* ===================================
+   SKILLS SECTION REFINEMENT
+   =================================== */
+
+.skill-tags {
+  display: flex;
+  gap: var(--spacing-xs);
+  flex-wrap: wrap;
+  margin-bottom: var(--spacing-md);
+}
+
+.skill-category {
+  background: var(--glass-bg);
+  backdrop-filter: blur(var(--glass-blur));
+  padding: var(--spacing-md);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--glass-border);
+}
+
+/* ===================================
    RESPONSIVE DESIGN
    =================================== */
 
@@ -565,11 +652,11 @@ footer p {
     --font-size-2xl: 2rem;
     --spacing-xl: 3rem;
   }
-  
+
   #about .container {
     grid-template-columns: 1fr;
   }
-  
+
   .nav-links {
     position: fixed;
     top: 60px;
@@ -584,21 +671,22 @@ footer p {
     transition: all var(--transition-normal);
     pointer-events: none;
   }
-  
+
   .nav-links.active {
     transform: translateY(0);
     opacity: 1;
     pointer-events: all;
   }
-  
+
   .menu-toggle {
     display: block;
   }
-  
-  .projects-grid {
+
+  .projects-grid,
+  .education-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .skills-grid {
     grid-template-columns: 1fr;
   }
@@ -609,7 +697,7 @@ footer p {
     flex-direction: column;
     width: 100%;
   }
-  
+
   .btn {
     width: 100%;
   }
