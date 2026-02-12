@@ -616,8 +616,99 @@ footer p {
 }
 
 /* ===================================
-   RESPONSIVE DESIGN
+   SYSTEMS & MINDSET SECTIONS
    =================================== */
+
+#systems,
+#why-hire {
+  padding: var(--spacing-xl) 0;
+}
+
+.systems-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-lg);
+}
+
+.system-box {
+  background: var(--color-bg-card);
+  border: var(--border-cyber);
+  padding: var(--spacing-md);
+  position: relative;
+}
+
+.system-box::before {
+  content: '// PHILOSOPHY';
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  font-size: 0.6rem;
+  color: rgba(0, 243, 255, 0.2);
+}
+
+.system-box h3 {
+  color: var(--color-text-neon);
+  margin-bottom: var(--spacing-sm);
+  font-size: var(--font-size-md);
+}
+
+.system-box p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.mindset-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-lg);
+  margin-top: var(--spacing-md);
+}
+
+.mindset-item strong {
+  display: block;
+  color: var(--color-text-neon);
+  font-size: var(--font-size-lg);
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+}
+
+/* ===================================
+   CASE STUDY REFINEMENTS
+   =================================== */
+
+.case-study-details {
+  margin-top: var(--spacing-md);
+  display: grid;
+  gap: var(--spacing-sm);
+}
+
+.detail-item {
+  border-left: 2px solid var(--color-accent-pink);
+  padding-left: var(--spacing-sm);
+}
+
+.detail-item strong {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--color-accent-pink);
+  text-transform: uppercase;
+  margin-bottom: 2px;
+}
+
+.detail-item p {
+  font-size: 0.85rem;
+  margin-bottom: 0;
+}
+
+#hero .hero-subtitle {
+  font-size: var(--font-size-lg);
+  color: var(--color-accent-pink);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: var(--spacing-sm);
+}
 
 @media (max-width: 768px) {
   :root {

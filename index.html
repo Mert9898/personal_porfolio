@@ -17,12 +17,11 @@
         <div class="container">
             <div class="logo">Portfolio</div>
             <ul class="nav-links">
-                <li><a href="#hero" class="active">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#experience">Experience</a></li>
+                <li><a href="#hero" class="active">Terminal</a></li>
+                <li><a href="#systems">Philosophy</a></li>
+                <li><a href="#projects">Engineering</a></li>
                 <li><a href="#education">Education</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#skills">Skills</a></li>
+                <li><a href="#skills">Stack</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
             <button class="menu-toggle" aria-label="Toggle menu">☰</button>
@@ -34,64 +33,81 @@
         <div class="container">
             <div class="hero-content">
                 <h1>Hi, I'm <span class="typing-text" id="typingText"></span></h1>
-                <p>Backend Software Developer experienced in Python and Java, building RESTful APIs, secure
-                    authentication systems, and scalable database architectures. Skilled in React and full-stack
-                    development with a strong focus on clean architecture and performance optimization.</p>
+                <p class="hero-subtitle">Backend Engineer | Systems Designer</p>
+                <p>I build scalable backend architectures, design secure APIs, and optimize performance.
+                    I don't just write features—I think in systems, edge cases, and architectural tradeoffs.</p>
                 <div class="cta-buttons">
-                    <a href="#projects" class="btn btn-primary">View My Work</a>
-                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                    <a href="#projects" class="btn btn-primary">Review Engineering Case Studies</a>
+                    <a href="#contact" class="btn btn-secondary">Discuss Infrastructure</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about">
+    <!-- Section: How I Build Systems -->
+    <section id="systems">
         <div class="container">
-            <div class="about-image">
-                <img src="profile-placeholder.jpg" alt="Profile picture" id="profileImage">
-            </div>
-            <div class="about-content">
-                <h2>About Me</h2>
-                <p>I'm a Backend Software Developer based in Warsaw, Poland, experienced in Python and Java. I
-                    specialize in building RESTful APIs, secure authentication systems, and scalable database
-                    architectures. I am also skilled in React and full-stack development with a strong focus on clean
-                    architecture and performance optimization.</p>
-                <p>Currently pursuing my Master's degree in Computer Science at Polish Japanese Academy Of Information
-                    Technology. I hold a Master's degree from Politechnika Warszawska and a Bachelor's degree in
-                    Computer Engineering from İzmir Institute Of Technology.</p>
-                <p>I'm committed to modular development practices and performance optimization. My experience includes
-                    reducing processing cycles through internal automation tools and boosting user adoption rates
-                    through UI prototyping and design.</p>
+            <h2>How I Build Systems</h2>
+            <div class="systems-grid">
+                <div class="system-box">
+                    <h3>Backend Architecture</h3>
+                    <p>I prioritize **Modular Monoliths** or **Microservices** based on scale. I focus on separation of
+                        concerns, ensuring business logic is decoupled from infrastructure.</p>
+                </div>
+                <div class="system-box">
+                    <h3>API Design</h3>
+                    <p>I design **RESTful APIs** with a focus on idempotency, versioning, and secure endpoint
+                        standardization. I optimize for low latency and predictable data contracts.</p>
+                </div>
+                <div class="system-box">
+                    <h3>Database Efficiency</h3>
+                    <p>I approach data with **Normalization** for integrity, but implement strategic **Denormalization**
+                        or **Caching (Redis)** when performance hot-spots are identified.</p>
+                </div>
+                <div class="system-box">
+                    <h3>Security First</h3>
+                    <p>I implement **JWT-based Auth**, **RBAC (Role-Based Access Control)**, and input validation to
+                        mitigate unauthorized access and injection risks at the architectural level.</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Experience Section -->
-    <section id="experience">
+    <!-- Why Hire Me Section -->
+    <section id="why-hire">
         <div class="container">
-            <h2>Experience</h2>
+            <div class="hire-content">
+                <h2>Engineering Mindset</h2>
+                <div class="mindset-list">
+                    <div class="mindset-item">
+                        <strong>Systems Thinking</strong>
+                        <p>I look beyond the ticket. I analyze how a feature impacts cascading services, database load,
+                            and system stability.</p>
+                    </div>
+                    <div class="mindset-item">
+                        <strong>Clean & Maintainable Code</strong>
+                        <p>I write code for the next engineer. I prioritize readability, unit testing, and comprehensive
+                            documentation.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: Strategic Impact (CV Background) -->
+    <section id="impact">
+        <div class="container">
+            <h2>Professional Impact</h2>
             <div class="experience-timeline">
                 <div class="experience-item">
                     <div class="experience-header">
                         <h3>Software Developer Intern</h3>
-                        <span class="experience-date">July 2022 - September 2022</span>
+                        <span class="experience-date">July 2022 - Sept 2022</span>
                     </div>
                     <div class="experience-company">Teleperformance • Istanbul, Türkiye</div>
-                    <ul class="experience-details">
-                        <li>Participated in 50+ peer code reviews and collaborative Git-based version control, improving
-                            code quality and reducing post-deployment defects by ~20% through modular development
-                            practices.</li>
-                        <li>Developed internal automation tools that reduced repetitive client support tasks by 40%,
-                            shortened average processing cycles by 30%, and improved response consistency across support
-                            teams.</li>
-                        <li>Integrated RESTful APIs with client-facing web applications, enabling real-time data
-                            synchronization and improving data accuracy by 25%, resulting in faster and more reliable
-                            customer workflows.</li>
-                        <li>Engineered and maintained web application interfaces using Design Software (Sketch, Figma)
-                            over a 10-week project, boosting user adoption rates by 18%, and accelerating UI prototyping
-                            by 35% for new product features.</li>
-                    </ul>
+                    <p>Focused on **Automation & Performance**. Developed internal tooling that reduced support
+                        processing cycles by 30% and improved response consistency across departments. Contributed to
+                        architectural clarity through 50+ peer code reviews.</p>
                 </div>
             </div>
         </div>

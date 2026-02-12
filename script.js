@@ -47,7 +47,7 @@ window.addEventListener('scroll', updateActiveNav);
 // ===================================
 
 const typingText = document.getElementById('typingText');
-const textToType = 'Mert Ayaz Ozkan';
+const textToType = 'MERT AYAZ OZKAN';
 let charIndex = 0;
 
 function typeText() {
