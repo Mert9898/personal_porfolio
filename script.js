@@ -135,7 +135,7 @@ function generateProfilePlaceholder() {
     ctx.fillRect(0, 0, 400, 400);
 
     // Add grid lines
-    ctx.strokeStyle = 'rgba(0, 243, 255, 0.1)';
+    ctx.strokeStyle = 'rgba(0, 255, 0, 0.1)';
     ctx.lineWidth = 1;
     for (let i = 0; i < 400; i += 40) {
         ctx.beginPath(); ctx.moveTo(i, 0); ctx.lineTo(i, 400); ctx.stroke();
@@ -143,14 +143,14 @@ function generateProfilePlaceholder() {
     }
 
     // Add neon border
-    ctx.strokeStyle = '#00f3ff';
+    ctx.strokeStyle = '#00ff00';
     ctx.lineWidth = 5;
     ctx.strokeRect(10, 10, 380, 380);
 
     // Add text with neon glow
     ctx.shadowBlur = 15;
-    ctx.shadowColor = '#00f3ff';
-    ctx.fillStyle = '#00f3ff';
+    ctx.shadowColor = '#00ff00';
+    ctx.fillStyle = '#00ff00';
     ctx.font = 'bold 80px "JetBrains Mono", monospace';
     ctx.textAlign = 'center';
     ctx.textBaseline = 'middle';
@@ -250,5 +250,5 @@ if (navLinksContainer) {
 // CONSOLE MESSAGE
 // ===================================
 
-console.log('%c[TERMINAL ACCESS: GRANTED]', 'font-size: 18px; font-weight: bold; color: #00f3ff; background: #000; padding: 5px;');
-console.log('%cWelcome to the cyber-portofolio of Mert Ayaz Ozkan.', 'font-size: 14px; color: #00f3ff;');
+console.log('%c[TERMINAL ACCESS: GRANTED]', 'font-size: 18px; font-weight: bold; color: #00ff00; background: #000; padding: 5px;');
+console.log('%cWelcome to the cyber-portofolio of Mert Ayaz Ozkan.', 'font-size: 14px; color: #00ff00;');

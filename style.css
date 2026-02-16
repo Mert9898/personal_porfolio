@@ -3,17 +3,18 @@
    =================================== */
 
 :root {
-  /* Cybernetic Color Palette */
-  --color-bg-deep: hsl(0, 0%, 2%);
-  --color-bg-card: hsl(0, 0%, 5%);
-  --color-text-neon: hsl(180, 100%, 50%);
-  /* Cyber Cyan */
-  --color-text-dim: hsl(180, 30%, 60%);
-  --color-accent-pink: hsl(320, 100%, 60%);
+  /* Green HUD Color Palette */
+  --color-bg-deep: hsl(120, 100%, 2%);
+  --color-bg-card: hsl(120, 100%, 4%);
+  --color-text-neon: hsl(120, 100%, 50%);
+  /* Matrix/Emerald Green */
+  --color-text-dim: hsl(120, 30%, 50%);
+  --color-accent-pink: hsl(100, 100%, 40%);
+  /* Darker Green for accents */
 
   /* Neon Glows */
-  --glow-cyan: 0 0 10px rgba(0, 243, 255, 0.5), 0 0 20px rgba(0, 243, 255, 0.2);
-  --glow-text: 0 0 8px rgba(0, 243, 255, 0.8);
+  --glow-cyan: 0 0 10px rgba(0, 255, 0, 0.5), 0 0 20px rgba(0, 255, 0, 0.2);
+  --glow-text: 0 0 8px rgba(0, 255, 0, 0.8);
 
   /* Gradients */
   --gradient-cyber: linear-gradient(90deg, var(--color-text-neon), var(--color-accent-pink));
@@ -40,8 +41,19 @@
   --font-size-3xl: 4rem;
 
   /* Borders */
-  --border-cyber: 1px solid rgba(0, 243, 255, 0.3);
+  --border-cyber: 1px solid rgba(0, 255, 0, 0.3);
   --radius-sm: 2px;
+
+  /* New Variables for consistent HUD Theme */
+  --color-accent-cyan: hsl(120, 100%, 50%);
+  --color-accent-blue: hsl(120, 100%, 70%);
+  --color-text-primary: var(--color-text-neon);
+  --color-text-secondary: var(--color-text-dim);
+  --glass-bg: rgba(0, 10, 0, 0.8);
+  --glass-blur: 15px;
+  --glass-border: rgba(0, 255, 0, 0.1);
+  --gradient-primary: linear-gradient(90deg, #00ff00, #008800);
+  --gradient-secondary: linear-gradient(135deg, #00ff00, #004400);
 
   /* Transitions */
   --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
@@ -81,8 +93,8 @@ body::before {
   width: 100%;
   height: 100%;
   background-image:
-    linear-gradient(rgba(0, 243, 255, 0.05) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0, 243, 255, 0.05) 1px, transparent 1px);
+    linear-gradient(rgba(0, 255, 0, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 255, 0, 0.05) 1px, transparent 1px);
   background-size: var(--grid-size) var(--grid-size);
   z-index: -1;
   pointer-events: none;
@@ -95,11 +107,11 @@ body::after {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(rgba(18, 16, 16, 0) 50%,
+  background: linear-gradient(rgba(0, 10, 0, 0) 50%,
       rgba(0, 0, 0, 0.1) 50%), linear-gradient(90deg,
-      rgba(255, 0, 0, 0.02),
+      rgba(0, 255, 0, 0.02),
       rgba(0, 255, 0, 0.01),
-      rgba(0, 0, 255, 0.02));
+      rgba(0, 255, 0, 0.02));
   background-size: 100% 4px, 3px 100%;
   z-index: 9999;
   pointer-events: none;
@@ -112,7 +124,7 @@ body::after {
   left: 0;
   width: 100%;
   height: 100px;
-  background: linear-gradient(0deg, rgba(0, 243, 255, 0) 0%, rgba(0, 243, 255, 0.1) 50%, rgba(0, 243, 255, 0) 100%);
+  background: linear-gradient(0deg, rgba(0, 255, 0, 0) 0%, rgba(0, 255, 0, 0.1) 50%, rgba(0, 255, 0, 0) 100%);
   opacity: 0.1;
   z-index: 1000;
   pointer-events: none;
@@ -306,7 +318,7 @@ nav .container {
   font-size: clamp(2.5rem, 8vw, 5rem);
   margin-bottom: var(--spacing-md);
   color: var(--color-text-neon);
-  text-shadow: 0 0 20px rgba(0, 243, 255, 0.4);
+  text-shadow: 0 0 20px rgba(0, 255, 0, 0.4);
 }
 
 .typing-text {
@@ -419,9 +431,9 @@ nav .container {
 }
 
 .tag {
-  background: rgba(0, 243, 255, 0.1);
+  background: rgba(0, 255, 0, 0.1);
   color: var(--color-text-neon);
-  border: 1px solid rgba(0, 243, 255, 0.3);
+  border: 1px solid rgba(0, 255, 0, 0.3);
   padding: 0.2rem 0.5rem;
   font-size: 0.7rem;
   text-transform: uppercase;
@@ -474,7 +486,7 @@ nav .container {
   color: var(--color-text-neon);
   margin-bottom: var(--spacing-md);
   font-size: var(--font-size-md);
-  border-bottom: 1px solid rgba(0, 243, 255, 0.1);
+  border-bottom: 1px solid rgba(0, 255, 0, 0.1);
   padding-bottom: 0.5rem;
 }
 
@@ -572,7 +584,7 @@ footer p {
   top: 5px;
   right: 10px;
   font-size: 0.6rem;
-  color: rgba(0, 243, 255, 0.2);
+  color: rgba(0, 255, 0, 0.2);
 }
 
 .education-item:hover {
@@ -644,7 +656,7 @@ footer p {
   top: 5px;
   right: 10px;
   font-size: 0.6rem;
-  color: rgba(0, 243, 255, 0.2);
+  color: rgba(0, 255, 0, 0.2);
 }
 
 .system-box h3 {
