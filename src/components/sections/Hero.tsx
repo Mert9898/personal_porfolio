@@ -15,34 +15,34 @@ export function Hero() {
             <div className="container relative z-10 px-6">
                 <div className="max-w-4xl mx-auto text-center">
                     <motion.div
-                        initial={{ opacity: 0, y: 20 }}
+                        initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.5 }}
+                        transition={{ duration: 0.8, ease: "easeOut" }}
                     >
-                        <span className="inline-block py-1 px-3 rounded-full bg-matrix-500/10 text-matrix-500 text-xs font-mono uppercase tracking-[0.2em] mb-6 border border-matrix-500/20">
-                            Initializing Secure Connection...
+                        <span className="inline-block py-1.5 px-4 rounded-full bg-matrix-500/10 text-matrix-500 text-[10px] font-mono uppercase tracking-[0.3em] mb-8 border border-matrix-500/20">
+                            Protocols Established // MAO.SYS
                         </span>
-                        <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-6 bg-gradient-to-b from-white to-matrix-500 bg-clip-text text-transparent">
+                        <h1 className="text-6xl md:text-8xl font-black tracking-tighter mb-8 leading-[0.9] bg-gradient-to-b from-white via-white to-matrix-500/20 bg-clip-text text-transparent">
                             Mert Ayaz Ozkan
                         </h1>
-                        <p className="text-xl md:text-2xl font-medium text-matrix-300 mb-8 max-w-2xl mx-auto leading-relaxed">
-                            Backend Software Developer skilled in Python/Java, REST APIs, clean architecture, database design.
+                        <p className="text-xl md:text-2xl font-medium text-matrix-300/80 mb-12 max-w-2xl mx-auto leading-relaxed">
+                            Backend Software Developer specialized in <span className="text-matrix-500">Python/Java</span>, REST APIs, and scalable infrastructure.
                         </p>
 
-                        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+                        <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
                             <a
                                 href="#projects"
-                                className="group w-full sm:w-auto px-8 py-4 bg-matrix-500 text-black font-bold rounded-lg hover:bg-matrix-400 transition-all flex items-center justify-center gap-2 shadow-[0_0_20px_rgba(0,255,0,0.3)]"
+                                className="btn-primary w-full sm:w-auto"
                             >
                                 Review Case Studies
                                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                             </a>
                             <a
-                                href="#contact"
-                                className="w-full sm:w-auto px-8 py-4 bg-transparent border border-matrix-500/30 text-matrix-500 font-bold rounded-lg hover:bg-matrix-500/5 transition-all flex items-center justify-center gap-2"
+                                href="mailto:ozkanmertayaz@gmail.com"
+                                className="btn-secondary w-full sm:w-auto"
                             >
                                 Discuss Infrastructure
-                                <Download className="w-5 h-5 opacity-50" />
+                                <Download className="w-5 h-5 opacity-40 group-hover:opacity-100 transition-opacity" />
                             </a>
                         </div>
                     </motion.div>

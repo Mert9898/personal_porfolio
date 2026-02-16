@@ -42,41 +42,46 @@ const education = [
 
 export function Experience() {
     return (
-        <section id="experience" className="py-24 bg-matrix-950/30">
+        <section id="experience" className="section-padding bg-matrix-950/20 relative overflow-hidden">
             <div className="container px-6 mx-auto">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-24">
                     {/* Experience Column */}
                     <div>
-                        <div className="flex items-center gap-4 mb-12">
-                            <Briefcase className="text-matrix-500 w-8 h-8" />
-                            <h2 className="text-3xl font-bold text-white tracking-tight">Professional Experience</h2>
-                        </div>
+                        <motion.div
+                            initial={{ opacity: 0, x: -20 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true }}
+                            className="flex items-center gap-6 mb-16"
+                        >
+                            <Briefcase className="text-matrix-500 w-8 h-8 opacity-50" />
+                            <h2 className="text-4xl font-black text-white tracking-tighter">Professional Experience</h2>
+                        </motion.div>
 
-                        <div className="space-y-12 border-l border-matrix-500/10 pl-8 ml-4">
+                        <div className="space-y-16 border-l border-matrix-500/10 pl-10 ml-4">
                             {experience.map((exp, i) => (
                                 <motion.div
                                     key={exp.company}
-                                    initial={{ opacity: 0, x: -20 }}
-                                    whileInView={{ opacity: 1, x: 0 }}
+                                    initial={{ opacity: 0, y: 20 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
                                     viewport={{ once: true }}
                                     transition={{ delay: i * 0.1 }}
-                                    className="relative"
+                                    className="relative group"
                                 >
-                                    <div className="absolute -left-[41px] top-2 w-4 h-4 rounded-full bg-matrix-500 border-4 border-black" />
-                                    <h3 className="text-xl font-bold text-white mb-1">{exp.role}</h3>
-                                    <div className="text-matrix-500 font-mono text-sm mb-4 flex items-center gap-2">
-                                        {exp.company} <span className="text-matrix-900">|</span> {exp.date}
+                                    <div className="absolute -left-[45px] top-2 w-3 h-3 rounded-full bg-matrix-950 border-2 border-matrix-500/20 group-hover:border-matrix-500 transition-colors duration-500" />
+                                    <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-matrix-500 transition-colors">{exp.role}</h3>
+                                    <div className="text-matrix-500 font-mono text-xs uppercase tracking-widest mb-6 flex items-center gap-3">
+                                        {exp.company} <span className="w-1 h-1 rounded-full bg-matrix-900" /> {exp.date}
                                     </div>
-                                    <ul className="space-y-3">
+                                    <ul className="space-y-4">
                                         {exp.bullets.map((bullet, j) => (
-                                            <li key={j} className="text-matrix-300 text-sm leading-relaxed flex gap-2">
-                                                <span className="text-matrix-500/50 mt-1">▹</span>
+                                            <li key={j} className="text-matrix-300 text-sm leading-relaxed flex gap-3 opacity-80 group-hover:opacity-100 transition-opacity">
+                                                <span className="text-matrix-500/30 mt-1.5 shrink-0">▹</span>
                                                 {bullet}
                                             </li>
                                         ))}
                                     </ul>
-                                    <div className="mt-4 pt-4 border-t border-matrix-500/5 flex items-center gap-2 text-xs font-mono text-matrix-400">
-                                        <span className="text-matrix-500/30">ENGINE:</span> {exp.tech}
+                                    <div className="mt-8 pt-6 border-t border-matrix-500/5 flex items-center gap-3 text-[10px] font-mono text-matrix-400/60">
+                                        <span className="text-matrix-500/20 px-1.5 py-0.5 border border-matrix-500/10 rounded">ENGINE</span> {exp.tech}
                                     </div>
                                 </motion.div>
                             ))}
@@ -85,25 +90,30 @@ export function Experience() {
 
                     {/* Education Column */}
                     <div>
-                        <div className="flex items-center gap-4 mb-12">
-                            <GraduationCap className="text-matrix-500 w-8 h-8" />
-                            <h2 className="text-3xl font-bold text-white tracking-tight">Education</h2>
-                        </div>
+                        <motion.div
+                            initial={{ opacity: 0, x: 20 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true }}
+                            className="flex items-center gap-6 mb-16"
+                        >
+                            <GraduationCap className="text-matrix-500 w-8 h-8 opacity-50" />
+                            <h2 className="text-4xl font-black text-white tracking-tighter">Education</h2>
+                        </motion.div>
 
-                        <div className="space-y-8">
+                        <div className="space-y-10">
                             {education.map((edu, i) => (
                                 <motion.div
                                     key={edu.school + edu.date}
-                                    initial={{ opacity: 0, x: 20 }}
-                                    whileInView={{ opacity: 1, x: 0 }}
+                                    initial={{ opacity: 0, y: 20 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
                                     viewport={{ once: true }}
                                     transition={{ delay: i * 0.1 }}
-                                    className="glass-matrix p-6 rounded-xl border-l-4 border-l-matrix-500"
+                                    className="glass-matrix p-8 rounded-2xl border-l-4 border-l-matrix-500/20 hover:border-l-matrix-500 transition-all duration-500"
                                 >
-                                    <h3 className="text-lg font-bold text-white mb-1">{edu.degree}</h3>
-                                    <p className="text-matrix-400 text-sm mb-2">{edu.school}</p>
-                                    <div className="flex items-center gap-2 text-xs font-mono text-matrix-500">
-                                        <Calendar className="w-3 h-3" />
+                                    <h3 className="text-xl font-bold text-white mb-2">{edu.degree}</h3>
+                                    <p className="text-matrix-400 text-sm mb-4 font-medium opacity-80">{edu.school}</p>
+                                    <div className="flex items-center gap-2 text-[10px] font-mono text-matrix-500 tracking-widest uppercase">
+                                        <Calendar className="w-3 h-3 opacity-50" />
                                         {edu.date}
                                     </div>
                                 </motion.div>

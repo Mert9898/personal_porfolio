@@ -27,16 +27,16 @@ const projects = [
 
 export function Projects() {
     return (
-        <section id="projects" className="py-24 relative overflow-hidden">
+        <section id="projects" className="section-padding relative overflow-hidden">
             <div className="container px-6 mx-auto">
-                <div className="flex items-center gap-4 mb-16">
-                    <h2 className="text-3xl md:text-4xl font-bold text-white tracking-tight">
+                <div className="flex items-center gap-6 mb-20">
+                    <h2 className="text-4xl md:text-5xl font-black text-white tracking-tighter">
                         Case Studies
                     </h2>
-                    <div className="h-[1px] flex-grow bg-matrix-500/20" />
+                    <div className="h-[1px] flex-grow bg-matrix-500/10" />
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
                     {projects.map((project, i) => (
                         <ProjectCard key={project.title} {...project} index={i} />
                     ))}
