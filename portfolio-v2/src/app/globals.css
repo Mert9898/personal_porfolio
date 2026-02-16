@@ -1,0 +1,47 @@
+@import "tailwindcss";
+
+@theme {
+  --color-matrix-50: oklch(0.95 0.05 145);
+  --color-matrix-100: oklch(0.9 0.1 145);
+  --color-matrix-200: oklch(0.8 0.15 145);
+  --color-matrix-300: oklch(0.7 0.2 145);
+  --color-matrix-400: oklch(0.6 0.25 145);
+  --color-matrix-500: oklch(0.5 0.3 145);
+  --color-matrix-600: oklch(0.4 0.25 145);
+  --color-matrix-700: oklch(0.3 0.2 145);
+  --color-matrix-800: oklch(0.2 0.15 145);
+  --color-matrix-900: oklch(0.1 0.1 145);
+  --color-matrix-950: oklch(0.05 0.05 145);
+
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #0a0a0a;
+}
+
+.dark {
+  --background: #020617;
+  --foreground: #f8fafc;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+}
+
+/* Glassmorphism Utilities */
+.glass {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.glass-matrix {
+  background: rgba(2, 6, 23, 0.8);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(0, 255, 0, 0.1);
+  box-shadow: 0 0 15px rgba(0, 255, 0, 0.05);
+}
