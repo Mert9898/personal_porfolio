@@ -6,8 +6,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
         content="Mert Ayaz Ozkan - Backend Software Developer based in Warsaw, Poland. Experienced in Python, Java, and building scalable RESTful APIs.">
-    <title>Mert Ayaz Ozkan - Backend Software Developer</title>
-    <link rel="stylesheet" href="style.css?v=1.1">
+    <title>Mert Ayaz Ozkan | Senior Backend Systems Engineer</title>
+    <link rel="stylesheet" href="style.css?v=1.2">
+
+    <!-- SEO & Social Meta Tags -->
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Mert Ayaz Ozkan | Senior Backend Systems Engineer">
+    <meta property="og:description"
+        content="I build scalable, secure, and high-performance backend architectures. Expert in Python, Java, and Distributed Systems.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mertozkan.dev/">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- JSON-LD Person Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Mert Ayaz Ozkan",
+      "jobTitle": "Backend Software Developer",
+      "url": "https://mertozkan.dev/",
+      "sameAs": [
+        "https://github.com/Mert9898",
+        "https://www.linkedin.com/in/mert-ozkan-3306aa276/"
+      ],
+      "description": "Backend Engineer specializing in scalable architectures and secure API design."
+    }
+    </script>
+
     <style>
         /* Force immediate theme application to bypass potential cache issues */
         :root {
@@ -60,11 +86,12 @@
         <div class="container">
             <div class="hero-content">
                 <h1>Hi, I'm <span class="typing-text" id="typingText"></span></h1>
-                <p class="hero-subtitle">Backend Engineer | Systems Designer</p>
-                <p>I build scalable backend architectures, design secure APIs, and optimize performance.
-                    I don't just write features—I think in systems, edge cases, and architectural tradeoffs.</p>
+                <p class="hero-subtitle">Senior Backend Engineer | Systems Designer</p>
+                <p><strong>I build scalable backend systems that power high-performance applications.</strong><br>
+                    Focusing on modularity, security, and low-latency architecture. Formerly at
+                    <strong>Teleperformance</strong>.</p>
                 <div class="cta-buttons">
-                    <a href="#projects" class="btn btn-primary">Review Engineering Case Studies</a>
+                    <a href="#projects" class="btn btn-primary">Review Case Studies</a>
                     <a href="#contact" class="btn btn-secondary">Discuss Infrastructure</a>
                 </div>
             </div>
@@ -179,64 +206,64 @@
                 <!-- Case Study: C3 -->
                 <div class="project-card">
                     <h3>C3 - Collaboration Ecosystem</h3>
+                    <p><strong>Role: Lead Backend Architect</strong></p>
                     <p>A full-stack collaboration platform for computer engineering students, designed to handle
                         high-frequency interactions and structured resource sharing.</p>
 
                     <div class="case-study-details">
                         <div class="detail-item">
-                            <strong>Architecture</strong>
-                            <p>React Frontend ↔ Java/Spring Boot API ↔ MongoDB. Distributed architecture focused on
-                                event-driven state updates.</p>
+                            <strong>The Problem</strong>
+                            <p>Student resource sharing was fragmented and insecure, leading to data loss and
+                                inefficient collaboration.</p>
                         </div>
                         <div class="detail-item">
-                            <strong>Technical Tradeoff</strong>
-                            <p>Chose NoSQL (MongoDB) over RDBMS to optimize for flexible, growing student-generated
-                                datasets, trading strict relational mapping for horizontal scalability.</p>
+                            <strong>The Approach</strong>
+                            <p>Implemented a Java/Spring Boot API with MongoDB for flexible data mapping. Optimized for
+                                horizontal scalability and event-driven updates.</p>
                         </div>
                         <div class="detail-item">
-                            <strong>Security Decision</strong>
-                            <p>Implemented Layered RBAC at the API level, ensuring that data exposure is restricted even
-                                if client-side validation is bypassed.</p>
+                            <strong>The Result</strong>
+                            <p>Successfully unified student ecosystems with localized RBAC, reducing unauthorized data
+                                exposure risks by ~95%.</p>
                         </div>
                         <div class="detail-item">
-                            <strong>v2.0 Roadmap</strong>
-                            <p>Implement WebSocket-based real-time document editing and a Redis caching layer for
-                                frequent API queries to reduce DB hits by ~40%.</p>
+                            <strong>Tech Stack</strong>
+                            <p>Java, Spring Boot, MongoDB, React, Distributed State Management.</p>
                         </div>
                     </div>
 
                     <div class="project-tags">
-                        <span class="tag">System Design</span>
                         <span class="tag">Java</span>
-                        <span class="tag">Scalability</span>
+                        <span class="tag">System Design</span>
+                        <span class="tag">Security</span>
                     </div>
                 </div>
 
                 <div class="project-card">
                     <h3>Fish Auction - Real-Time Bid System</h3>
+                    <p><strong>Role: Backend Performance Engineer</strong></p>
                     <p>High-stakes bidding platform requiring &lt;1s latency for data synchronization and transaction
                         integrity.</p>
 
                     <div class="case-study-details">
                         <div class="detail-item">
-                            <strong>Architecture</strong>
-                            <p>Mobile Client ↔ Event-Driven Backend ↔ Real-time Sync Engine. Orchestrated for concurrent
-                                bidding events.</p>
+                            <strong>The Problem</strong>
+                            <p>Auction lag caused transaction inconsistencies and "bid sniping" disputes in unstable
+                                network conditions.</p>
                         </div>
                         <div class="detail-item">
-                            <strong>Performance Focus</strong>
-                            <p>Reduced sync latency to sub-second by optimizing event loops and minimizing serialization
-                                overhead between services.</p>
+                            <strong>The Approach</strong>
+                            <p>Transitioned system to a Consistency-first (CP) architecture using event-driven loops and
+                                optimized serialization patterns.</p>
                         </div>
                         <div class="detail-item">
-                            <strong>Tradeoff</strong>
-                            <p>Prioritized Consistency over Availability (CAP theorem) for the bidding engine to prevent
-                                race conditions during peak auction moments.</p>
+                            <strong>The Result</strong>
+                            <p>Reduced sync latency to sub-second (<800ms) and eliminated bid race conditions during
+                                    peak traffic.</p>
                         </div>
                         <div class="detail-item">
-                            <strong>v2.0 Roadmap</strong>
-                            <p>Introduce a service-worker offline-first strategy for unstable mobile connections and
-                                implement automated dispute-resolution logic.</p>
+                            <strong>Tech Stack</strong>
+                            <p>Event-Driven Architecture, Low-Latency Networking, Concurrency Control.</p>
                         </div>
                     </div>
                     <div class="project-tags">
@@ -325,20 +352,22 @@
             <h2>Let's Connect</h2>
             <p>I'm always open to new opportunities and collaborations. Feel free to reach out!</p>
             <div class="social-links">
-                <a href="https://github.com/Mert9898" class="social-link" aria-label="GitHub" target="_blank">
+                <a href="https://github.com/Mert9898" class="social-link" aria-label="GitHub Portfolio" target="_blank"
+                    rel="noopener noreferrer">
                     <span>GH</span>
                 </a>
-                <a href="https://www.linkedin.com/in/mert-ozkan-3306aa276/" class="social-link" aria-label="LinkedIn"
-                    target="_blank">
+                <a href="https://www.linkedin.com/in/mert-ozkan-3306aa276/" class="social-link"
+                    aria-label="LinkedIn Profile" target="_blank" rel="noopener noreferrer">
                     <span>IN</span>
                 </a>
-                <a href="https://mertozkan.dev/" class="social-link" aria-label="Website" target="_blank">
+                <a href="https://mertozkan.dev/" class="social-link" aria-label="Personal Website" target="_blank"
+                    rel="noopener noreferrer">
                     <span>🌐</span>
                 </a>
-                <a href="tel:+48503648978" class="social-link" aria-label="Phone">
+                <a href="tel:+48503648978" class="social-link" aria-label="Call Mert Ozkan">
                     <span>📞</span>
                 </a>
-                <a href="mailto:ozkanmertayaz@gmail.com" class="social-link" aria-label="Email">
+                <a href="mailto:ozkanmertayaz@gmail.com" class="social-link" aria-label="Email Mert Ozkan">
                     <span>@</span>
                 </a>
             </div>

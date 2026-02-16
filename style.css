@@ -286,13 +286,20 @@ nav .container {
 }
 
 .nav-links a:hover,
-.nav-links a.active {
+.nav-links a.active,
+.nav-links a:focus {
   color: var(--color-text-primary);
+  outline: none;
 }
 
-.nav-links a:hover::after,
-.nav-links a.active::after {
+.nav-links a:focus::after {
   width: 100%;
+}
+
+a:focus,
+button:focus {
+  outline: 2px dashed var(--color-text-neon);
+  outline-offset: 4px;
 }
 
 .menu-toggle {
