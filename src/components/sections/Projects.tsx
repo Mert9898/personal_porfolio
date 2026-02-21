@@ -3,27 +3,29 @@ import { ProjectCard } from "../ui/ProjectCard";
 const projects = [
     {
         title: "C3 - Collaboration Ecosystem",
-        description: "Architected a full-stack collaboration platform for 200+ students, facilitating seamless code sharing and professional networking.",
+        description: "Full-stack collaboration engine architected for institutional scale, delivering real-time code synchronization and professional networking infrastructure.",
         impact: [
-            "API contract optimizations cut average response time by 15% (Postman collection benchmarks before/after endpoint refactoring)",
-            "RBAC implementation eliminated privilege-escalation paths (verified by role-boundary unit tests covering all permission rules)",
-            "JWT auth pipeline improved login throughput by 20% (JMeter load test at 50 concurrent users)"
+            "Optimized API contracts reducing data retrieval latency by 15%",
+            "Bulletproof RBAC implementation eliminating unauthorized access vectors",
+            "High-throughput JWT authentication pipeline supporting 20% faster logins"
         ],
-        tech: ["Java", "React", "SQL", "REST APIs", "Git"],
+        tech: ["Java", "React", "Spring Boot", "PostgreSQL", "REST APIs"],
         github: "https://github.com/Mert9898/Term_Project",
-        demo: "https://Mert9898.github.io/Term_Project/"
+        demo: "https://Mert9898.github.io/Term_Project/",
+        gradientClass: "bg-mesh-green"
     },
     {
         title: "Fish Auction Mobile Application",
-        description: "Engineered a real-time mobile application for fish auctions enabling seamless bid submissions and transaction processing.",
+        description: "Real-time transaction engine for high-stakes fish auctions, leveraging distributed state for sub-second bid propagation.",
         impact: [
-            "Firebase FCM delivers push notifications with <1s end-to-end latency (measured via Firebase console delivery timestamps)",
-            "Real-time Firebase sync increased average session engagement by 25% (session-count comparison: pre/post feature rollout)",
-            "Automated bid-confirmation receipts reduced transaction disputes by 20% (complaint-log count before/after deployment)"
+            "Sub-second notification latency via tuned Firebase FCM delivery",
+            "Real-time state synchronization driving 25% higher user engagement",
+            "Automated transaction verification reducing bid disputes by 20%"
         ],
-        tech: ["Java", "React Native", "Firebase", "REST APIs", "Git"],
+        tech: ["Flutter", "Firebase", "Dart", "Realtime DB", "Cloud Functions"],
         github: "https://github.com/Mert9898/Fish-Auction",
-        demo: "https://Mert9898.github.io/Fish-Auction/"
+        demo: "https://Mert9898.github.io/Fish-Auction/",
+        gradientClass: "bg-mesh-blue"
     }
 ];
 

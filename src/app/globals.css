@@ -13,63 +13,92 @@
   --color-matrix-900: oklch(0.1 0.1 145);
   --color-matrix-950: oklch(0.05 0.05 145);
 
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: 'Inter', var(--font-geist-sans), sans-serif;
+  --font-mono: 'JetBrains Mono', var(--font-geist-mono), monospace;
 
-  --spacing-section: 8rem;
+  --spacing-section: 10rem;
 }
 
 :root {
-  --background: #ffffff;
-  --foreground: #0a0a0a;
-}
-
-.dark {
-  --background: #020617;
-  --foreground: #f8fafc;
+  --background: #02040a;
+  --foreground: #f0f2f5;
 }
 
 body {
   background-color: var(--background);
   color: var(--foreground);
-  font-size: 1.125rem;
-  line-height: 1.6;
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  -webkit-font-smoothing: antialiased;
 }
 
-h1,
-h2,
-h3,
-h4 {
-  line-height: 1.2;
-  font-weight: 800;
-  letter-spacing: -0.025em;
+/* Mesh Gradient Utilities */
+.bg-mesh-green {
+  background-color: #02040a;
+  background-image:
+    radial-gradient(at 0% 0%, rgba(0, 255, 0, 0.15) 0px, transparent 50%),
+    radial-gradient(at 100% 100%, rgba(0, 255, 0, 0.1) 0px, transparent 50%),
+    radial-gradient(at 50% 50%, rgba(0, 255, 0, 0.05) 0px, transparent 50%);
+}
+
+.bg-mesh-blue {
+  background-color: #02040a;
+  background-image:
+    radial-gradient(at 0% 100%, rgba(0, 100, 255, 0.15) 0px, transparent 50%),
+    radial-gradient(at 100% 0%, rgba(0, 255, 150, 0.1) 0px, transparent 50%),
+    radial-gradient(at 50% 50%, rgba(0, 50, 200, 0.05) 0px, transparent 50%);
+}
+
+/* Glassmorphism Evolution */
+.glass-matrix {
+  background: rgba(10, 15, 30, 0.4);
+  backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid rgba(0, 255, 0, 0.1);
+  box-shadow:
+    0 10px 40px -10px rgba(0, 0, 0, 0.5),
+    inset 0 1px 1px rgba(255, 255, 255, 0.05);
+}
+
+.glass-matrix:hover {
+  border-color: rgba(0, 255, 0, 0.2);
+  background: rgba(10, 15, 30, 0.5);
 }
 
 /* Premium Component Utilities */
 .btn-primary {
-  @apply px-8 py-4 bg-matrix-500 text-black font-bold rounded-lg transition-all active:scale-95 flex items-center justify-center gap-2;
-  box-shadow: 0 0 20px rgba(0, 255, 0, 0.3);
+  @apply px-10 py-4 bg-matrix-500 text-black font-black rounded-full transition-all duration-500 flex items-center justify-center gap-3 relative overflow-hidden;
+  box-shadow: 0 0 30px rgba(0, 255, 0, 0.2);
 }
 
 .btn-primary:hover {
-  @apply bg-matrix-400;
-}
-
-.btn-secondary {
-  @apply px-8 py-4 bg-transparent border border-matrix-500/20 text-matrix-400 font-bold rounded-lg transition-all active:scale-95 flex items-center justify-center gap-2;
-}
-
-.btn-secondary:hover {
-  @apply bg-matrix-500/5 border-matrix-500;
-}
-
-.glass-matrix {
-  background: rgba(2, 6, 23, 0.7);
-  backdrop-filter: blur(24px);
-  border: 1px solid rgba(0, 255, 0, 0.08);
-  box-shadow: 0 8px 32px -8px rgba(0, 0, 0, 0.5), 0 0 15px rgba(0, 255, 0, 0.03);
+  @apply -translate-y-1 scale-105;
+  box-shadow: 0 0 50px rgba(0, 255, 0, 0.4);
 }
 
 .section-padding {
-  @apply py-32;
+  @apply py-40;
+}
+
+/* Global Animations */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+h1,
+h2,
+h3 {
+  @apply tracking-tight font-black;
 }
