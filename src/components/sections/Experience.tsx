@@ -10,10 +10,10 @@ const experience = [
         date: "July 2022 - September 2022",
         location: "Istanbul, Türkiye",
         bullets: [
-            "Led 50+ peer code reviews and managed Git workflows, achieving a 20% reduction in post-deployment defects.",
-            "Developed internal automation tools reducing repetitive support tasks by 40% and shortening cycles by 30%.",
-            "Integrated RESTful APIs improving data accuracy by 25% for faster customer workflows.",
-            "Built UI prototypes in Figma/Sketch, boosting user adoption rates by 18% and accelerating prototyping by 35%."
+            "Led 50+ peer code reviews and managed Git workflows, achieving a 20% reduction in post-deployment defects (tracked via Jira bug tickets before and after review-process rollout).",
+            "Developed internal automation tools reducing repetitive support tasks by 40% and shortening ticket-resolution cycles by 30% (measured by team-lead weekly time logs comparing manual vs. automated workflows).",
+            "Integrated RESTful APIs improving data accuracy by 25% (validated by reconciling API response payloads against source-system records during QA regression testing).",
+            "Built UI prototypes in Figma/Sketch, boosting user adoption by 18% (session analytics before/after UI rollout) and cutting design-to-handoff time by 35% (sprint cycle comparison)."
         ],
         tech: "Python, Java, SQL, REST APIs, Git"
     }
@@ -28,7 +28,7 @@ const education = [
     },
     {
         school: "Politechnika Warszawska",
-        degree: "MSc Computer Science — Program discontinued",
+        degree: "MSc Computer Science — Transferred to PJAIT",
         date: "2025",
         location: "Warsaw, Poland"
     },
