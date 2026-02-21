@@ -10,7 +10,8 @@ const projects = [
             "JWT auth pipeline improved login throughput by 20% (JMeter load test at 50 concurrent users)"
         ],
         tech: ["Java", "React", "SQL", "REST APIs", "Git"],
-        github: "https://github.com/Mert9898/Term_Project"
+        github: "https://github.com/Mert9898/Term_Project",
+        demo: "https://Mert9898.github.io/Term_Project/"
     },
     {
         title: "Fish Auction Mobile Application",
@@ -21,7 +22,8 @@ const projects = [
             "Automated bid-confirmation receipts reduced transaction disputes by 20% (complaint-log count before/after deployment)"
         ],
         tech: ["Java", "React Native", "Firebase", "REST APIs", "Git"],
-        github: "https://github.com/Mert9898/Fish-Auction"
+        github: "https://github.com/Mert9898/Fish-Auction",
+        demo: "https://Mert9898.github.io/Fish-Auction/"
     }
 ];
 
